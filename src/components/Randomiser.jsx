@@ -2,13 +2,22 @@ import React, { useState } from "react";
 
 function Randomiser() {
   const [movie, setMovie] = useState();
+  const [stream, setStream] = useState([]);
   const [clicked, setClicked] = useState(false);
 
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "32f984dd07msh46792872b09b300p127fc4jsn5839010128a3",
+      "X-RapidAPI-Host":
+        "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+    },
+  };
+
   function gotMovie() {
-    
     fetch(
       "https://api.themoviedb.org/3/movie/" +
-        Math.floor(Math.random() * 996 + 11) +
+        Math.floor(Math.random() * 43999 + 11) +
         "?api_key=5a88be73171f672ab2c0bcbb2fc8fe22#"
     )
       .then((res) => {
@@ -17,10 +26,20 @@ function Randomiser() {
       .then((data) => {
         setMovie(data);
         setClicked(true);
-        console.log(data);
+        fetch(
+          "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" +
+            data.title,
+          options
+        )
+          .then((response) => response.json())
+          .then((response) => {
+            const streaming = response.results[0].locations.map(({ display_name }) => display_name);
+            console.log(streaming);
+            setStream(streaming);
+          })
+          .catch((err) => console.error(err));
       });
   }
-
 
   return (
     <div class="col-md-12" align="center">
@@ -76,6 +95,12 @@ function Randomiser() {
                 </li>
               </div>
             </div>
+
+
+                <li class="list-group-item three">
+                  {stream ? stream.map(channel => channel) : "-"}
+                </li>
+
           </ul>
         </div>
       ) : null}
