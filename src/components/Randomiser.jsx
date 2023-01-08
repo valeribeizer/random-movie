@@ -29,14 +29,19 @@ function Randomiser() {
       </button>
       {clicked ? (
         <div class="card" style={{ width: "25rem" }}>
-          <img
-            src={"https://image.tmdb.org/t/p/original/" + movie.poster_path}
-            class="card-img-top"
-            alt="..."
-          ></img>
+          {movie.poster_path ? (
+            <img
+              src={"https://image.tmdb.org/t/p/original/" + movie.poster_path}
+              class="card-img-top"
+              alt="..."
+            />
+          ) : null}
+
           <div class="card-body">
-            <h5 class="card-title">{movie.title}</h5>
-            <p class="card-text">{movie.overview}</p>
+            <h5 class="card-title">
+              {movie.title ? movie.title : "Ooopsis..🙊"}
+            </h5>
+            <p class="card-text">{movie.overview ? movie.overview : ""}</p>
           </div>
           <ul class="list-group list-group-flush">
             <div class="grid-container">
@@ -44,7 +49,9 @@ function Randomiser() {
                 <p class="list-group-item ones">RELEASE DATE:</p>
               </div>
               <div>
-                <li class="list-group-item one">{movie.release_date}</li>
+                <li class="list-group-item one">
+                  {movie.release_date ? movie.release_date : "-"}
+                </li>
               </div>
             </div>
 
@@ -53,7 +60,9 @@ function Randomiser() {
                 <p class="list-group-item twos">DURATION:</p>
               </div>
               <div>
-                <li class="list-group-item two">{movie.runtime + " min"}</li>
+                <li class="list-group-item two">
+                  {movie.runtime ? movie.runtime + " min" : "-"}
+                </li>
               </div>
             </div>
 
@@ -62,7 +71,9 @@ function Randomiser() {
                 <p class="list-group-item threes">RATING:</p>
               </div>
               <div>
-                <li class="list-group-item three">{movie.vote_average}</li>
+                <li class="list-group-item three">
+                  {movie.vote_average ? movie.vote_average : "-"}
+                </li>
               </div>
             </div>
           </ul>
