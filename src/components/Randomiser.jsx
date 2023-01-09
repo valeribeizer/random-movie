@@ -114,7 +114,7 @@ function Randomiser() {
           </ul>
         </div>
       ) : (
-        <h3>Click the button!</h3>
+        null
       )}
     </div>
   );
