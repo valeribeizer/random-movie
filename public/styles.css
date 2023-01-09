@@ -1,14 +1,22 @@
 body {
     background-color: #A3C7D6;
     background-image: url("popcorn.png");
-    background-size: 650px;
+    background-size: 45%;
     background-repeat: no-repeat;
-    background-position-x: -150px;
-    background-position-y: 330px; 
+    background-position-x: -16%;
+    background-position-y: 134%; 
     background-attachment: fixed;
     padding-bottom: 100px;
     position: relative;
     min-height: 100vh;
+}
+
+@media (max-width: 1028px) {
+    body {
+        background-size: 115%;
+        background-position-x: 206%;
+        background-position-y: 144%; 
+    }
 }
 
 h1 {
