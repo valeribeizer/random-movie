@@ -39,7 +39,7 @@ h1 {
 }
 
 .card {
-    background-color: #9F73AB;
+    background-color: rgba(159, 115, 171, 0.9);
     border: none;
     padding-bottom: 20px;
 }
