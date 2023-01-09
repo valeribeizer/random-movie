@@ -1,5 +1,11 @@
 body {
     background-color: #A3C7D6;
+    background-image: url("popcorn.png");
+    background-size: 650px;
+    background-repeat: no-repeat;
+    background-position-x: -150px;
+    background-position-y: 330px; 
+    background-attachment: fixed;
     padding-bottom: 100px;
     position: relative;
     min-height: 100vh;
@@ -9,13 +15,19 @@ h1 {
     font-family: 'Seymour One', sans-serif;
     color: #3F3B6C;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-family: "Ubuntu", sans-serif;
+    color: #9F73AB;
+    padding-top: 50px;
 }
 
 .btn {
     background-color: #624F82;
     color: #A3C7D6;
-    margin: 50px auto;
+    margin: 60px auto;
     position: relative;
     font-family: "Ubuntu", sans-serif;
     border: none;

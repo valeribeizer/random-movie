@@ -1,8 +1,11 @@
 import  React from 'react';
 
 function Header() {
-    return(
-        <h1>Get your random movie!</h1>
+    return (
+      <div>
+        <h1>Still wondering what to watch?</h1>
+        <h1>Let us pick!</h1>
+      </div>
     );
 };
 

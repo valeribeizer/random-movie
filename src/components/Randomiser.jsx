@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function Randomiser() {
   const [movie, setMovie] = useState();
   const [stream, setStream] = useState([]);
+  const [url, setUrl] = useState([]);
   const [clicked, setClicked] = useState(false);
 
   const options = {
@@ -36,8 +37,13 @@ function Randomiser() {
             const streaming = response.results[0].locations.map(
               ({ display_name }) => display_name
             );
+                        const urls = response.results[0].locations.map(
+                          ({ url }) => url
+                        );
             console.log(streaming);
+            console.log(urls);
             setStream(streaming);
+            setUrl(urls);
           })
           .catch((err) => console.error(err));
       });
@@ -46,7 +52,7 @@ function Randomiser() {
   return (
     <div class="col-md-12" align="center">
       <button class="btn" onClick={gotMovie}>
-        Randomise!
+        GET A MOVIE!
       </button>
       {clicked ? (
         <div class="card" style={{ width: "25rem" }}>
@@ -60,7 +66,7 @@ function Randomiser() {
 
           <div class="card-body">
             <h5 class="card-title">
-              {movie.title ? movie.title : "Ooopsis..🙊"}
+              {movie.title ? movie.title : "Oopsis..🙊"}
             </h5>
             <p class="card-text">{movie.overview ? movie.overview : ""}</p>
           </div>
@@ -99,12 +105,14 @@ function Randomiser() {
             </div>
             {stream
               ? stream.map((channel) => (
-                  <li class="list-group-item four">{channel}</li>
+                  <li class="list-group-item four">
+                    <a href={url.map((urly) => urly)}>{channel}</a>
+                  </li>
                 ))
               : null}
           </ul>
         </div>
-      ) : null}
+      ) : <h3>Click the button!</h3>}
     </div>
   );
 }
