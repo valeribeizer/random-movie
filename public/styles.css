@@ -29,6 +29,7 @@ h1 {
 .card {
     background-color: #9F73AB;
     border: none;
+    padding-bottom: 20px;
 }
 
 .card-img-top {
@@ -85,6 +86,11 @@ h1 {
 .threes {
     background-color: #C996CC;
     text-align: left;
+}
+
+.four {
+    background-color: #FFD6EC;
+    text-align: right;
 }
 
 

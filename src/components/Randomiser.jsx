@@ -33,7 +33,9 @@ function Randomiser() {
         )
           .then((response) => response.json())
           .then((response) => {
-            const streaming = response.results[0].locations.map(({ display_name }) => display_name);
+            const streaming = response.results[0].locations.map(
+              ({ display_name }) => display_name
+            );
             console.log(streaming);
             setStream(streaming);
           })
@@ -95,12 +97,11 @@ function Randomiser() {
                 </li>
               </div>
             </div>
-
-
-                <li class="list-group-item three">
-                  {stream ? stream.map(channel => channel) : "-"}
-                </li>
-
+            {stream
+              ? stream.map((channel) => (
+                  <li class="list-group-item four">{channel}</li>
+                ))
+              : null}
           </ul>
         </div>
       ) : null}
