@@ -17,20 +17,22 @@ function Randomiser() {
 
   function gotMovie() {
     fetch(
-      "https://api.themoviedb.org/3/movie/" +
-        Math.floor(Math.random() * 687996 + 11) +
-        "?api_key=" +
-        process.env.REACT_APP_API_KEY
+      "https://api.themoviedb.org/3/movie/top_rated?api_key=" +
+        process.env.REACT_APP_API_KEY +
+        "&language=en-US&adult=false&page=" +
+        Math.floor(Math.random() * 500 + 1)
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setMovie(data);
+        const randomIndex = Math.floor(Math.random() * data.results.length);
+        const randomMovie = data.results[randomIndex];
+        setMovie(randomMovie);
         setClicked(true);
         fetch(
           "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" +
-            data.title,
+            randomMovie.title,
           options
         )
           .then((response) => response.json())
