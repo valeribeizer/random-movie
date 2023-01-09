@@ -70,7 +70,6 @@ h3 {
     grid-template-columns: 1fr 1fr;
 }
 
-
 .one {
     background-color: #3D2C8D;
     color: #A3C7D6;
@@ -104,7 +103,6 @@ h3 {
     background-color: #FFD6EC;
     text-align: right;
 }
-
 
 footer {
   position: absolute;
