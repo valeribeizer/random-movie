@@ -1,17 +1,13 @@
 body {
   font-family: "Ubuntu", sans-serif;
   background: rgb(150, 251, 241);
-  background-image: url("back-img.png");
-  background-size: 130%;
-  background-repeat: no-repeat;
-  background-position: bottom -10% right -15%;
   height: 95vh;
 }
 
 h1 {
   color: #bc484c;
   text-align: center;
-  font-size: 80px;
+  font-size: 80px !important;
   font-weight: 800;
   padding: 5% 10% 5%;
 }
@@ -20,7 +16,7 @@ h2 {
   color: rgb(64, 148, 232);
   text-align: center;
   letter-spacing: 2px;
-  font-size: 50px;
+  font-size: 60px !important;
   font-weight: 600;
 }
 
@@ -28,12 +24,18 @@ a {
   color: rgb(64, 148, 232);
 }
 
+.image {
+    padding-top: 10%;
+    margin-bottom: -5%;
+    margin-left: -15%;
+}
+
 .btn {
   color: #bc484c;
   margin: 10% auto;
   padding: 2%;
   width: 30%;
-  font-size: 30px;
+  font-size: 40px !important;
   border-color: #bc484c;
   border-radius: 40px;
 }
@@ -49,13 +51,16 @@ a {
   border: none;
   border-radius: 40px;
   padding-bottom: 5%;
-  width: 35rem;
-  height: 950px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -950px;
+  width: 35rem !important;
+  height: 950px !important;
   overflow: scroll;
 }
 
 .card-img-top {
-  width: 70%;
+  width: 70% !important;
   margin: auto;
 }
 
@@ -111,7 +116,6 @@ a {
 }
 
 footer {
-  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -127,7 +131,7 @@ footer {
 @media (min-width: 768px) {
   body {
     background-size: 85%;
-    background-position: bottom -15% left -85% !important;
+    background-position: bottom -15% left -85%;
   }
 
   h1 {
@@ -149,38 +153,41 @@ footer {
 }
 
 @media (min-width: 992px) {
-  body {
-    background-size: 45%;
-    background-position: bottom -60% left -10% !important;
-  }
-
   h1 {
     padding-top: 3%;
     padding-bottom: 1.5%;
-    font-size: 35px;
+    font-size: 35px !important;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   .btn {
     margin: 3% auto;
     padding: 0.5% !important;
     width: 15%;
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .card {
     width: 40rem;
-    height: 400px;
+    height: 400px !important;
+    margin-bottom: -400px;
   }
 
   .card-img-top {
-    width: 30%;
+    width: 30% !important;
   }
 
   .card-text {
       font-size: 20px;
   }
+
+  .image {
+    width: 50%;
+    padding-top: 0;
+    margin-top: -5%;
+    margin-bottom: -6%;
+}
 }

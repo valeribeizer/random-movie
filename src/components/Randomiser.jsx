@@ -51,72 +51,81 @@ function Randomiser() {
   }
 
   return (
-    <div className="col-md-12" align="center">
-      <button className="btn btn-lg btn-outline" onClick={gotMovie}>
-        GET A MOVIE
-      </button>
-      {clicked ? (
-        <div className="card">
-            {movie.poster_path ? (
-              <img
-                src={"https://image.tmdb.org/t/p/original/" + movie.poster_path}
-                className="card-img-top"
-                alt="..."
-              />
-            ) : null}
-            <div className="card-body">
-              <h5 className="card-title">
-                {movie.title ? movie.title : "Oopsis..🙊"}
-              </h5>
-              <p className="card-text">
-                {movie.overview ? movie.overview : ""}
-              </p>
-            </div>
-            <ul className="list-group list-group-flush">
-              <div className="grid-container">
-                <div>
-                  <p className="list-group-item ones">RELEASE DATE:</p>
-                </div>
-                <div>
-                  <li className="list-group-item one">
-                    {movie.release_date ? movie.release_date : "-"}
-                  </li>
-                </div>
+    <div>
+      <div className="row">
+        <div className="col-md-12" align="center">
+          <button className="btn btn-lg btn-outline" onClick={gotMovie}>
+            GET A MOVIE
+          </button>
+          {clicked ? (
+            <div className="card">
+              {movie.poster_path ? (
+                <img
+                  src={
+                    "https://image.tmdb.org/t/p/original/" + movie.poster_path
+                  }
+                  className="card-img-top"
+                  alt="..."
+                />
+              ) : null}
+              <div className="card-body">
+                <h5 className="card-title">
+                  {movie.title ? movie.title : "Oopsis..🙊"}
+                </h5>
+                <p className="card-text">
+                  {movie.overview ? movie.overview : ""}
+                </p>
               </div>
-
-              <div className="grid-container">
-                <div>
-                  <p className="list-group-item twos">POPULARITY:</p>
-                </div>
-                <div>
-                  <li className="list-group-item two">
-                    {movie.popularity
-                      ? Math.floor(movie.popularity) + "%"
-                      : "-"}
-                  </li>
-                </div>
-              </div>
-
-              <div className="grid-container">
-                <div>
-                  <p className="list-group-item threes">RATING:</p>
-                </div>
-                <div>
-                  <li className="list-group-item three">
-                    {movie.vote_average ? movie.vote_average : "-"}
-                  </li>
-                </div>
-              </div>
-              {stream
-                ? stream.map((channel) => (
-                    <li className="list-group-item four">
-                      <a href={url.map((urly) => urly)}>{channel}</a>
+              <ul className="list-group list-group-flush">
+                <div className="grid-container">
+                  <div>
+                    <p className="list-group-item ones">RELEASE DATE:</p>
+                  </div>
+                  <div>
+                    <li className="list-group-item one">
+                      {movie.release_date ? movie.release_date : "-"}
                     </li>
-                  ))
-                : null}
-            </ul>
-          </div>
-      ) : null}
+                  </div>
+                </div>
+
+                <div className="grid-container">
+                  <div>
+                    <p className="list-group-item twos">POPULARITY:</p>
+                  </div>
+                  <div>
+                    <li className="list-group-item two">
+                      {movie.popularity
+                        ? Math.floor(movie.popularity) + "%"
+                        : "-"}
+                    </li>
+                  </div>
+                </div>
+
+                <div className="grid-container">
+                  <div>
+                    <p className="list-group-item threes">RATING:</p>
+                  </div>
+                  <div>
+                    <li className="list-group-item three">
+                      {movie.vote_average ? movie.vote_average : "-"}
+                    </li>
+                  </div>
+                </div>
+                {stream
+                  ? stream.map((channel) => (
+                      <li className="list-group-item four">
+                        <a href={url.map((urly) => urly)}>{channel}</a>
+                      </li>
+                    ))
+                  : null}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </div>
+      <div className="row image">
+        <img src="back-img.png"  alt="img"/>
+      </div>
     </div>
   );
 }
