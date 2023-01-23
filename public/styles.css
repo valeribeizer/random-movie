@@ -1,113 +1,113 @@
 body {
-    font-family: "Ubuntu", sans-serif;
-    background: rgb(150, 251, 241);
-    background-image: url("back-img.png");
-    background-size: 130%;
-    background-repeat: no-repeat;
-    background-position: bottom -10% right -15%;
-    height: 95vh;
+  font-family: "Ubuntu", sans-serif;
+  background: rgb(150, 251, 241);
+  background-image: url("back-img.png");
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: bottom -10% right -15%;
+  height: 95vh;
 }
 
 h1 {
-    color: #bc484c;
-    text-align: center;
-    font-size: 80px;
-    font-weight: 800;
-    padding: 5% 10% 5%;
+  color: #bc484c;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 800;
+  padding: 5% 10% 5%;
 }
 
 h2 {
-    color: rgb(64, 148, 232);
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 50px;
-    font-weight: 600;
+  color: rgb(64, 148, 232);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 50px;
+  font-weight: 600;
 }
 
 a {
-    color: rgb(64, 148, 232);
+  color: rgb(64, 148, 232);
 }
 
 .btn {
-    color: #bc484c;
-    margin: 10% auto;
-    padding: 2%;
-    width: 30%;
-    font-size: 30px;
-    border-color: #bc484c;
-    border-radius: 40px;
+  color: #bc484c;
+  margin: 10% auto;
+  padding: 2%;
+  width: 30%;
+  font-size: 30px;
+  border-color: #bc484c;
+  border-radius: 40px;
 }
 
 .btn:hover {
-    color: rgb(188, 72, 76);
-    border-color: rgb(188, 72, 76);
-    background-color: rgb(188, 72, 76, 0.5);
+  color: rgb(188, 72, 76);
+  border-color: rgb(188, 72, 76);
+  background-color: rgb(188, 72, 76, 0.5);
 }
 
 .card {
-    background-color: rgb(188, 72, 76, 0.9);
-    border: none;
-    border-radius: 40px;
-    padding-bottom: 5%;
-    width: 35rem;
-    height: 950px;
-    overflow: scroll;
+  background-color: rgb(188, 72, 76, 0.9);
+  border: none;
+  border-radius: 40px;
+  padding-bottom: 5%;
+  width: 35rem;
+  height: 950px;
+  overflow: scroll;
 }
 
 .card-img-top {
-    width: 70%;
-    margin: auto;
+  width: 70%;
+  margin: auto;
 }
 
 .card-title {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .card-text {
-    font-size: 25px;
-    text-align: justify;
+  font-size: 25px;
+  text-align: justify;
 }
 
 .list-group-item {
-    text-align: right;
-    border: none;
+  text-align: right;
+  border: none;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .one {
-    background-color: rgb(188, 72, 76);
+  background-color: rgb(188, 72, 76);
 }
 
 .ones {
-    background-color: rgb(188, 72, 76);
-    text-align: left;
+  background-color: rgb(188, 72, 76);
+  text-align: left;
 }
 
 .two {
-    background-color: rgb(146, 53, 57);
+  background-color: rgb(146, 53, 57);
 }
 
 .twos {
-    background-color: rgb(146, 53, 57);
-    text-align: left;
+  background-color: rgb(146, 53, 57);
+  text-align: left;
 }
 
 .three {
-    background-color: rgb(115, 38, 42);
+  background-color: rgb(115, 38, 42);
 }
 
 .threes {
-    background-color: rgb(115, 38, 42);
-    text-align: left;
+  background-color: rgb(115, 38, 42);
+  text-align: left;
 }
 
 .four {
-    background-color: rgb(88, 25, 28);
-    text-align: right;
+  background-color: rgb(88, 25, 28);
+  text-align: right;
 }
 
 footer {
@@ -121,33 +121,66 @@ footer {
 .footer-p {
   margin-top: 1.5%;
   font-size: 12px;
-  color:  #3F3B6C;
+  color: #3f3b6c;
 }
 
 @media (min-width: 768px) {
-    body {
-        background-size: 85%;
-        background-position: bottom -15% left -85% !important;
-    }
+  body {
+    background-size: 85%;
+    background-position: bottom -15% left -85% !important;
+  }
 
-    h1 {
-        font-size: 50px;
-    }
+  h1 {
+    font-size: 50px;
+  }
 
-    h2 {
-        font-size: 40px;
-    }
+  h2 {
+    font-size: 40px;
+  }
 
-    .card {
-        width: 50rem;
-        height: 700px;
-    }
+  .card {
+    width: 50rem;
+    height: 700px;
+  }
 
-    .card-img-top {
+  .card-img-top {
     width: 40%;
-}
+  }
 }
 
 @media (min-width: 992px) {
+  body {
+    background-size: 45%;
+    background-position: bottom -60% left -10% !important;
+  }
 
-} 
+  h1 {
+    padding-top: 3%;
+    padding-bottom: 1.5%;
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .btn {
+    margin: 3% auto;
+    padding: 0.5% !important;
+    width: 15%;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 40rem;
+    height: 400px;
+  }
+
+  .card-img-top {
+    width: 30%;
+  }
+
+  .card-text {
+      font-size: 20px;
+  }
+}
