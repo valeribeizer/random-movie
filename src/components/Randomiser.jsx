@@ -52,11 +52,11 @@ function Randomiser() {
 
   return (
     <div className="col-md-12" align="center">
-      <button className="btn" onClick={gotMovie}>
-        GET A MOVIE!
+      <button className="btn btn-lg btn-outline" onClick={gotMovie}>
+        GET A MOVIE
       </button>
       {clicked ? (
-        <div className="card" style={{ width: "25rem" }}>
+        <div className="card">
           {movie.poster_path ? (
             <img
               src={"https://image.tmdb.org/t/p/original/" + movie.poster_path}
@@ -85,11 +85,11 @@ function Randomiser() {
 
             <div className="grid-container">
               <div>
-                <p className="list-group-item twos">DURATION:</p>
+                <p className="list-group-item twos">POPULARITY:</p>
               </div>
               <div>
                 <li className="list-group-item two">
-                  {movie.runtime ? movie.runtime + " min" : "-"}
+                  {movie.popularity ? Math.floor(movie.popularity) + "%" : "-"}
                 </li>
               </div>
             </div>
