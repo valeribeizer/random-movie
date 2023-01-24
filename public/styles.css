@@ -128,33 +128,6 @@ footer {
   color: #3f3b6c;
 }
 
-/* @media (min-width: 768px) {
-  h1 {
-    font-size: 50px;
-  }
-
-  h2 {
-    font-size: 45px;
-  }
-
-  .card {
-    width: 40rem;
-    height: 600px;
-    margin-bottom: -600px;
-  }
-
-  .card-img-top {
-    width: 50%;
-  }
-
-  .image {
-    width: 90%;
-    padding-top: 0;
-    margin-top: 5%;
-    margin-bottom: -8%;
-  }
-} */
-
 @media (min-width: 992px) {
   h1 {
     padding-top: 3%;
